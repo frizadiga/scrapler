@@ -1,2 +1,2 @@
-import from './scraping.js';
+import {scraping} from './scraping.js';
 module.export = {};

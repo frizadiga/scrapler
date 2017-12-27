@@ -6,7 +6,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './js/scrapler.js'
+    filename: 'scrapler.js'
   },
  
   module: {

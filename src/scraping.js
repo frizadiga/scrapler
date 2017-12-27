@@ -1,1 +1,1 @@
-console.log('scraping...');
+export const scraping = ()=> console.log('scraping...');
