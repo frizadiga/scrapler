@@ -4,7 +4,15 @@
   "description": "Lightweight Node.js Scraper Engine",
   "main": "app.js",
   "scripts": {
+    "ls": "live-server --watch=src,dist,app --port=1111 --no-browser",
+    "dev": "concurrently -k \"npm run watch\" \"npm run ls\" ",
+    "watch": "webpack --config webpack.base.js --progress --watch",
+    "build": "webpack --config webpack.build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frizadiga/scrapler.git"
   },
   "keywords": [
     "scrape",
@@ -12,6 +20,16 @@
     "scraping"
   ],
   "author": "frizadiga",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "live-server": "^1.2.0",
+    "nodemon": "^1.14.3",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  }
 }
-
